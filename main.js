@@ -1,6 +1,6 @@
 const generatorForm = document.querySelector(".generator-form");
 const imageGallery = document.querySelector(".Image-gallery");
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "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";
 let isImageGenerating = false;
 const updateImageCard = (ImageDataArray) => {
   ImageDataArray.forEach((imgObject, index) => {
@@ -21,7 +21,9 @@ const updateImageCard = (ImageDataArray) => {
 const generateAiImages = async (userPrompt, userImgQuantity) => {
   try {
     // Send a request to the OpenAI API to generate images based on user inputs
-    const response = await fetch("https://api.openai.com/v1/images/generations",
+    const response = await fetch("https://api.openai.com/v1/images/generations"
+
+,
       {
         method: "POST",
         headers: {
